@@ -1,0 +1,2 @@
+Cd E:\Eclipse Folder One\RestAssured_Testng_sdetProject
+mvn clean install

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+<test name="test">
+<classes>
+    <class name="com.sdetProject.TestCases.TC001_GetAllEmployees"/>
+    <class name="com.sdetProject.TestCases.TC002_Demo_POST"/>
+      <class name="com.sdetProject.TestCases.TC003_DemoDeleteRequest"/>
+</classes>
+</test>
+</suite>
