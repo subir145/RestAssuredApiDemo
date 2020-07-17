@@ -1,5 +1,8 @@
 package com.sdetProject.TestCases;
 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -9,13 +12,23 @@ import org.testng.annotations.Test;
 import com.sdetProject.Generics.TestBase;
 import com.sdetProject.Utilities.RestUtils;
 
+
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
+import io.restassured.response.Response;
+import io.restassured.response.ResponseOptions;
+import io.restassured.specification.RequestSpecification;
 
 public class TC002_Demo_POST extends TestBase {
 	
+	// private static Logger logger=LogManager.getLogger(TC002_Demo_POST.class);
+	
 	String empname=RestUtils.ename();
 	String empjob=RestUtils.ejob();
+	
+	static Response response;
+
+	
 	
 	@BeforeClass
 	public void GetAllEmployees() throws InterruptedException
@@ -23,7 +36,7 @@ public class TC002_Demo_POST extends TestBase {
 		logger.info("------started TC001 Get All Employees-------");
 		RestAssured.baseURI="https://reqres.in/";
 		RestAssured.basePath="/api/users";
-		httpRequest=RestAssured.given();
+		RequestSpecification httpRequest=RestAssured.given();
 		
 		JSONObject requesparams = new JSONObject();
 		requesparams.put("name",empname);

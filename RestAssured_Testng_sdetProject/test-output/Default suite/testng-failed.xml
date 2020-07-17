@@ -3,14 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.sdetProject.TestCases.TC003_DemoDeleteRequest">
+      <class name="com.sdetProject.TestCases.TC002_Demo_POST">
         <methods>
-          <include name="CheckStatusCode"/>
-          <include name="GetAllEmployees"/>
-          <include name="Setup"/>
+          <include name="CheckContentType"/>
+          <include name="CheckResponseTime"/>
           <include name="tearDown"/>
+          <include name="CheckServerType"/>
+          <include name="Setup"/>
+          <include name="CheckContentLength"/>
+          <include name="CheckStatusLine"/>
+          <include name="CheckContentEncoding"/>
+          <include name="GetAllEmployees"/>
+          <include name="CheckStatusCode"/>
         </methods>
-      </class> <!-- com.sdetProject.TestCases.TC003_DemoDeleteRequest -->
+      </class> <!-- com.sdetProject.TestCases.TC002_Demo_POST -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

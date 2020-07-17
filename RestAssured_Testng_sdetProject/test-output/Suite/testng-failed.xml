@@ -13,6 +13,7 @@
       <class name="com.sdetProject.TestCases.TC002_Demo_POST">
         <methods>
           <include name="CheckContentType"/>
+          <include name="CheckResponseTime"/>
           <include name="tearDown"/>
           <include name="CheckServerType"/>
           <include name="Setup"/>
